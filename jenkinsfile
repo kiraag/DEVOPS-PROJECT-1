@@ -67,7 +67,7 @@ pipeline {
 		
 		 environment {
             GIT_REPO_NAME = "kiraag.devops"
-            GIT_USER_NAME = "kiran"
+            GIT_USER_NAME = "kiraag"
         }
 		
             steps {
