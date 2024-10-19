@@ -1,1 +1,1 @@
-# mindcircuit13 - SAMPLE APP
+# Sample app - kiraag.devops
