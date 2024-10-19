@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: saikirandanda/devopshub:6
+        image: saikirandanda/devopshub:1
         ports:
         - containerPort: 8080
 
