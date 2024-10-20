@@ -22,7 +22,7 @@ pipeline {
                 sh 'ls -ltr'
                 
                 sh ''' mvn sonar:sonar \\
-                      -Dsonar.host.url=http://3.83.190.251/:9000/ \\
+                      -Dsonar.host.url=http://3.83.190.251:9000/ \\
                       -Dsonar.login=sqa_6b347c29ce1d52c4e584c104ec13cfd6834d52cf'''
             }
     	}
@@ -54,7 +54,7 @@ pipeline {
             sh 'docker login -u saikirandanda -p ${Dockerhub}'
 			
 			 }
-			   sh 'docker push saikirandanda/devopshub:${BUILD_NUMBER}'
+			   sh 'docker push saikirandanda/cicd-project:${BUILD_NUMBER}'
 			   
            
 				}
@@ -78,7 +78,7 @@ pipeline {
                     git config user.email "saikiran1407.sk@gmail.com"
                     git config user.name "kiran"
                     BUILD_NUMBER=${BUILD_NUMBER}
-                    sed -i "s/devopshub:.*/devopshub:${BUILD_NUMBER}/g" deploymentfiles/deployment.yml
+                    sed -i "s/cicd-project:.*/cicd-project:${BUILD_NUMBER}/g" deploymentfiles/deployment.yml
                     git add .
                     
                     git commit -m "Update deployment image to version ${BUILD_NUMBER}"
