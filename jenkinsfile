@@ -22,8 +22,8 @@ pipeline {
                 sh 'ls -ltr'
                 
                 sh ''' mvn sonar:sonar \\
-                      -Dsonar.host.url=http://3.82.231.231:9000/ \\
-                      -Dsonar.login=sqa_b49472371b18d6482a331a7d820e4d3908b3c583'''
+                      -Dsonar.host.url=http://3.83.190.251/:9000/ \\
+                      -Dsonar.login=sqa_6b347c29ce1d52c4e584c104ec13cfd6834d52cf'''
             }
     	}
 		
@@ -41,7 +41,7 @@ pipeline {
         stage('Docker Image') {
             steps {
                 echo 'Docker Image building'
-				sh 'docker build -t saikirandanda/devopshub:${BUILD_NUMBER} .'
+				sh 'docker build -t saikirandanda/cicd-project:${BUILD_NUMBER} .'
             }
         }
 		
