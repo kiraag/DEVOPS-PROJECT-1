@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: saikirandanda/cicd-project:2
+        image: saikirandanda/cicd-project:1
         ports:
         - containerPort: 8080
 
